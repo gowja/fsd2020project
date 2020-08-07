@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,11 @@ import { SecondComponent } from './second/second.component';
 import { Second1Component } from './second1/second1.component';
 import { FooterComponent } from './footer/footer.component';
 import { LeftsidedivComponent } from './leftsidediv/leftsidediv.component';
+import { AddpersonalComponent } from './addpersonal/addpersonal.component';
+import { AddmarkComponent } from './addmark/addmark.component';
+import { PdetailComponent } from './pdetail/pdetail.component';
+import { MdetailComponent } from './mdetail/mdetail.component';
+import { EditpComponent } from './editp/editp.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +23,18 @@ import { LeftsidedivComponent } from './leftsidediv/leftsidediv.component';
     SecondComponent,
     Second1Component,
     FooterComponent,
-    LeftsidedivComponent
+    LeftsidedivComponent,
+    AddpersonalComponent,
+    AddmarkComponent,
+    PdetailComponent,
+    MdetailComponent,
+    EditpComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

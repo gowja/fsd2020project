@@ -1,0 +1,8 @@
+<p>pdetail works!</p>
+<div *ngFor='let x of pdetail'>
+    <h3>{{x._id}}</h3>
+    <h3>{{x.uname}}</h3>
+    <h4>{{x.pw}}</h4>
+    <button (click)='editp()'>Edit</button>
+    <button (click)='deletep(x._id)'>Delete</button>
+</div>
