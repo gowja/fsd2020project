@@ -23,15 +23,20 @@ app.get('/',(req,res)=>{
     res.send("hi");
 });
 
-app.get('/add',(req,res)=>{
+app.post('/add',(req,res)=>{
+    res.header("Access-Control-Allow-Origin","*");
+    res.header('Access-Control-Allow-Methods: GET,POST,PATCH,PUT,DELETE,OPTIONS');
+    console.log(req.body);
     newdata={
-        uname :"smru",
-        pw :"pass3"
+        uname :req.body.pdetail.uname,
+        pw :req.body.pdetail.pw
     }
     var newdata=new pdata(newdata);
     newdata.save();
     res.send(newdata);
 })
+
+
 
 app.get('/addmark',(req,res)=>{
     newmark={
@@ -49,9 +54,13 @@ app.get('/mark',(req,res)=>{
     mark.find()
     .then(function(mk){
         res.send(mk)
+   
     });
 });
 
+app.post('/deletep',(req,res)=>{
+    
+})
 app.listen(7777,function(){
     console.log("success");
 });
